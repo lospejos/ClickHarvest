@@ -42,15 +42,46 @@ public final class ClickHarvest extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        cropDrops.put(Material.WHEAT, new CropDrops(new CropDrop(1, 1, Material.WHEAT, 100),
-                new CropDrop(0, 3, Material.WHEAT_SEEDS, 100)));
-        cropDrops.put(Material.CARROTS, new CropDrops(new CropDrop(1, 4, Material.CARROT, 100)));
-        cropDrops.put(Material.BEETROOTS, new CropDrops(new CropDrop(1, 1, Material.BEETROOT, 100),
-                new CropDrop(0, 3, Material.BEETROOT_SEEDS, 100)));
-        cropDrops.put(Material.POTATOES, new CropDrops(new CropDrop(1, 4, Material.POTATO, 100),
-                new CropDrop(1, 1, Material.POISONOUS_POTATO, 2)));
-        cropDrops.put(Material.COCOA,new CropDrops( new CropDrop(2, 2, Material.COCOA_BEANS, 100)));
-        cropDrops.put(Material.NETHER_WART, new CropDrops(new CropDrop(1, 3, Material.NETHER_WART, 100)));
+        cropDrops.put(
+                Material.WHEAT, new CropDrops(
+                        new CropDrop(1, 1, Material.WHEAT, 100),
+                        new CropDrop(0, 3, Material.WHEAT_SEEDS, 100)
+                )
+        );
+        cropDrops.put(
+                Material.CARROTS, new CropDrops(
+                        new CropDrop(1, 4, Material.CARROT, 100)
+                )
+        );
+        cropDrops.put(
+                Material.BEETROOTS, new CropDrops(
+                        new CropDrop(1, 1, Material.BEETROOT, 100),
+                        new CropDrop(0, 3, Material.BEETROOT_SEEDS, 100)
+                )
+        );
+        cropDrops.put(
+                Material.POTATOES, new CropDrops(
+                        new CropDrop(1, 4, Material.POTATO, 100),
+                        new CropDrop(1, 1, Material.POISONOUS_POTATO, 2)
+                )
+        );
+        cropDrops.put(
+                Material.COCOA, new CropDrops(
+                        new CropDrop(2, 2, Material.COCOA_BEANS, 100)
+                )
+        );
+        cropDrops.put(
+                Material.NETHER_WART, new CropDrops(
+                        new CropDrop(1, 3, Material.NETHER_WART, 100)
+                )
+        );
+
+        cropDrops.put(
+                Material.SUGAR_CANE, new CropDrops(
+                        new CropDrop(1, 3, Material.SUGAR_CANE, 100)
+                )
+        );
+
         getServer().getPluginManager().registerEvents(this, this);
     }
 }
